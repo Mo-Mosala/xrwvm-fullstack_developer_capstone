@@ -1,6 +1,5 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
-from django.contrib import admin
 
 class CarMake(models.Model):
     name = models.CharField(max_length=100)
@@ -27,5 +26,3 @@ class CarModel(models.Model):
     def __str__(self):
         return self.name
 
-admin.site.register(CarMake)
-admin.site.register(CarModel)
